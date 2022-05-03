@@ -1,0 +1,295 @@
+
+body
+{
+    margin: 0;
+    color: #fff;
+    font-family: 'Cormorant', serif;
+    background: #1d1d1d;
+}
+header
+{
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px #fff;
+    position: sticky;
+    top: 0;
+    background: #1d1d1d;
+    font-family: 'Cormorant', serif;
+}
+header a
+{
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+h1
+{
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}
+#grid
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+}
+.photo
+{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+}
+.photo img
+{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+.photo p 
+{
+    text-align: center;
+
+}
+.icon
+{
+    display: none;
+}
+
+#add_new_photo
+{
+    position: fixed;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0;
+    background: rgba(29, 29, 29, .5);
+    display: none;
+}
+#add_new_photo.open
+{
+    display: flex;
+}
+#add_new_photo form
+{
+    width: 80%;
+    border: 2px solid #1d1d1d;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+}
+#add_new_photo input
+{
+    padding: .5rem;
+    /* font-family: 'Shizuru', cursive; */
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+#add_new_photo input.error
+{
+    border-color: red;
+}
+#add_new_photo button
+{
+    /* font-family: 'Shizuru', cursive; */
+    padding: .5rem;
+}
+#popup_photo
+{
+    position: fixed;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(29, 29, 29, .5);
+    display: none;
+}
+#popup_photo.open 
+{
+    display: flex;
+}
+#popup_photo img 
+{
+    max-width: 90%;
+    min-height: 90%;
+}
+
+
+.form 
+{
+    width: 50%;
+    margin: 3rem auto;
+}
+.form input
+{
+    padding: .5rem;
+    /* font-family: 'Shizuru', cursive; */
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form button
+{
+    /* font-family: 'Shizuru', cursive; */
+    padding: .5rem;
+}
+#grid img 
+{
+    max-width: 80%
+    /* height: 350px; */
+}
+.form .success{
+    color: lightgreen;
+    font-weight: bold;
+}
+.form .error
+{
+    color: red;
+    font-weight: bold;
+}
+#image img 
+{
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 1rem auto;
+}
+#image h1, #image p 
+{
+    padding: 0 3rem;
+    box-sizing:border-box;
+    margin: 1rem auto;
+}
+#image p 
+{
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+}
+.comments
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+.comments h2
+{
+    width: 90%;
+    margin: 0 auto;
+    /* padding: 0 1rem; */
+}
+.comment
+{
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    flex-basis: 45%;
+    box-sizing: border-box;
+    margin: 1rem 0;
+    min-width: 300px;
+}
+.comment p
+{
+    padding: 0;
+}
+.comment .author
+{
+    font-weight:bold;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+.comment .text
+{
+    font-size: 1.25rem;
+}
+.comment .date
+{
+    font-style:italic;
+    font-size: 1.4rem;
+}
+.comments .form
+{
+    width: 90%;
+}
+.comments .form textarea
+{
+    padding: .5rem;
+    font-family: 'Cormorant', serif;
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Animate */
+
+p
+{
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.45rem;
+}
+p::before
+{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: -1;
+    opacity: .5;
+}
+p:first-child:before
+{
+    background-image: url(https://i1.7fon.org/320/p107950.jpg);
+}
+
+p:hover{
+    color: #fff;
+}
+p:hover::before{
+    opacity: 1;
+}
+p:active{
+    opacity: .75;
+}
+p{
+    transition: opacity .25s ease, color .5s ease;
+}
+p::before
+{
+    transition: all .5s cubic-bezier(.84,.15,.13,.79);
+}
+@keyframes bg_animation{
+    from{
+        background-position-x: 0 ;
+    }
+    to {
+        background-position: -500px;
+    }
+}
+p::before
+{
+    animation: bg_animation 20s infinite linear;
+    background-size: 500px auto;
+}
+

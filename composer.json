@@ -1,0 +1,11 @@
+{
+    "name": "no/no",
+    "require": {
+        "rakit/validation": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Photos\\":""
+        }
+    }
+}
