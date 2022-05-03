@@ -1,0 +1,89 @@
+@media screen and (max-width: 515px ) {
+    header
+    {
+        height: auto;
+        position: relative;
+        
+    }
+    header a 
+    {
+        display: none;
+    }
+    h1
+    {
+        font-size: 15px;
+    }
+    .icon  
+    {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background: #fff;
+        padding: .5rem;
+        border-radius: 5px;
+        margin: 1rem;
+    
+    }
+    .icon img
+    {
+        width: 100%;
+    }
+    .popup 
+    {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        background: rgba(255, 255, 255, .8);
+    }
+    header.open .popup a
+    {
+        display: block;
+        text-align: center;
+        color: black;
+        margin: 10px 0;
+    }
+    #grid
+    {
+        grid-template-columns: 1fr ;
+    }
+}
+/*Ipad*/
+@media screen and (max-width: 768px ){
+    #grid
+    {
+        grid-template-columns: 1fr ;
+    }
+    
+} 
+@media screen and (max-height: 515px) {
+    h1
+    {
+        font-size: 15px;
+    }
+    #grid
+    {
+        grid-template-columns: 70%;
+        justify-content: center;
+    }
+    #grid p
+    {
+        margin-top: -5px;
+    }
+}
+/*Iphone X*/
+@media screen and (max-height:375px) {
+    #grid
+    {
+        grid-template-columns: 63%;
+    }
+    
+}
+/*Galaxy Fold*/
+@media screen and (max-height:280px) {
+    #grid
+    {
+        grid-template-columns: 53%;
+    }
+    
+}
